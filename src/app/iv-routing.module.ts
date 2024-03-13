@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+export const IV_ROUTES: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(IV_ROUTES)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class IvRoutingModule { }
