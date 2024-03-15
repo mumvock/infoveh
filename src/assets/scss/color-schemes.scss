@@ -1,19 +1,19 @@
 @mixin dark-scheme {
-    --c-main-background : rgb(37, 36, 35);
+    --c-main-background     : rgb(37, 36, 35);
 
-    --c-float-background: rgb(32, 31, 30);
+    --c-float-background    : rgb(32, 31, 30);
     --c-secondary-background: rgb(41, 40, 39);
 
-    --c-text-primary    : rgba(255, 255, 255, .95);
+    --c-text-primary        : rgba(255, 255, 255, .95);
 }
 
 @mixin light-scheme {
-    --c-main-background : rgba(255, 255, 255, .95);
+    --c-main-background     : rgba(255, 255, 255, .95);
 
-    --c-float-background: rgba(255, 255, 255, .60);
+    --c-float-background    : rgba(255, 255, 255, .60);
     --c-secondary-background: rgba(255, 255, 255, .80);
 
-    --c-text-primary    : rgb(37, 36, 35);
+    --c-text-primary        : rgb(37, 36, 35);
 }
 
 :root {
