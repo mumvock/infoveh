@@ -11,4 +11,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </main>
     `,
 })
-export class IvComponent { }
+export class IvComponent {}
