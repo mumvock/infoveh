@@ -1,3 +1,6 @@
 /* Base */
-@import './assets/scss/base.scss';
-@import './assets/scss/color-schemes.scss';
+@import './assets/scss/base';
+@import './assets/scss/color-schemes';
+
+/* Components */
+@import './assets/scss/components/dropdown';
