@@ -5,21 +5,29 @@
     --c-secondary-background: rgb(41, 40, 39);
 
     --c-text-primary        : rgba(255, 255, 255, .95);
+
+    --c-border              : rgba(255, 255, 255, .18);
+
+    --c-anchor              : rgb(152, 198, 255);
+    --c-anchor-hover        : rgb(184, 216, 255);
 }
 
 @mixin light-scheme {
     --c-main-background     : rgba(255, 255, 255, .95);
 
-    --c-float-background    : rgba(255, 255, 255, .60);
-    --c-secondary-background: rgba(255, 255, 255, .80);
+    --c-float-background    : rgb(252, 252, 252);
+    --c-secondary-background: rgb(242, 242, 242);
 
     --c-text-primary        : rgb(37, 36, 35);
+
+    --c-border              : rgb(238, 238, 238);
+
+    --c-anchor              : rgb(58, 131, 228);
+    --c-anchor-hover        : rgb(105, 164, 242);
 }
 
 :root {
     @include dark-scheme;
-    --c-anchor          : rgb(152, 198, 255);
-    --c-anchor-hover    : rgb(184, 216, 255);
 
     --c-active          : rgb(55, 96, 145);
     --c-active-hover    : rgb(73, 126, 191);
@@ -27,7 +35,6 @@
     --c-accent          : rgb(0, 129, 227);
     --c-accent-hover    : rgb(121, 181, 255);
 
-    --c-border          : rgba(255, 255, 255, .18);
     --c-error           : rgb(227, 0, 0);
 
     @media (prefers-color-scheme: dark) {
