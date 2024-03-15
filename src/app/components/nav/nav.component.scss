@@ -1,6 +1,6 @@
 :host {
-    background-color: var(--float-background-color);
-    border-bottom: solid 1px var(--border-color);
+    background-color: var(--c-float-background);
+    border-bottom: solid 1px var(--c-border);
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
@@ -22,15 +22,15 @@
                 padding: 1rem;
 
                 &:hover {
-                    background-color: var(--secondary-background-color);
+                    background-color: var(--c-secondary-background);
                 }
 
                 &.active {
-                    background-color: var(--active-color);
-                    color: var(--text-primary-color);
+                    background-color: var(--c-active);
+                    color: var(--c-text-primary);
 
                     &:hover {
-                        background-color: var(--active-hover-color);
+                        background-color: var(--c-active-hover);
                     }
                 }
             }

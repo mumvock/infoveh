@@ -5,8 +5,8 @@
 }
 
 :root {
-    background-color: var(--main-background-color);
-    color           : var(--text-primary-color);
+    background-color: var(--c-main-background);
+    color           : var(--c-text-primary);
     font-family     : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size       : 14px;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 a {
-    color: var(--anchor-color);
+    color: var(--c-anchor);
     cursor: pointer;
     outline: transparent;
     text-decoration: none;
@@ -25,7 +25,7 @@ a {
     user-select: none;
 
     &:hover {
-        color: var(--anchor-hover-color);
+        color: var(--c-anchor-hover);
     }
 }
 
@@ -38,7 +38,7 @@ h4 {
 }
 
 hr {
-    border-top-color: var(--main-background-color);
+    border-top-color: var(--c-main-background);
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
