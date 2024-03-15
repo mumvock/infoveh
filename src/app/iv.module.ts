@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IvRoutingModule } from './iv-routing.module';
 
 import { IvComponent } from './iv.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
     declarations: [
@@ -12,6 +13,7 @@ import { IvComponent } from './iv.component';
     imports: [
         BrowserModule,
         IvRoutingModule,
+        NavComponent,
     ],
     providers: [],
     bootstrap: [IvComponent]

@@ -1,0 +1,15 @@
+<menu>
+    <li *ngFor="let route of IV_ROUTES" [class.dropdown]="route.children">
+        <a (click)="parentNavigate(route)" [class.active]="currentPath$$() === route.path">
+            {{ route.title || (route.path | titlecase) }}
+        </a>
+        
+        <menu *ngIf="route.children as children">
+            <li *ngFor="let child of children">
+                <a [routerLink]="[route.path, child.path]" routerLinkActive="active">
+                    {{ child.title }}
+                </a>
+            </li>
+        </menu>
+    </li>
+</menu>

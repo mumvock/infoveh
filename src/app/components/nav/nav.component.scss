@@ -1,0 +1,39 @@
+:host {
+    background-color: var(--background-dark-color);
+    border-bottom: var(--border-line);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    user-select: none;
+
+    menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    > menu {
+        display: flex;
+        position: relative;
+
+        > li {
+            a {
+                display: block;
+                padding: 1rem;
+    
+                &:hover {
+                    background-color: var(--background-soft-light-color);
+                }
+
+                &.active {
+                    background-color: var(--active-color);
+                    color: var(--text-primary-color);
+    
+                    &:hover {
+                        background-color: var(--active-hover-color);
+                    }
+                }
+            }
+        }
+    }
+}
