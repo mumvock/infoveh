@@ -1,6 +1,6 @@
 :host {
-    background-color: var(--background-dark-color);
-    border-bottom: var(--border-line);
+    background-color: var(--float-background-color);
+    border-bottom: solid 1px var(--border-color);
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
@@ -20,15 +20,15 @@
             a {
                 display: block;
                 padding: 1rem;
-    
+
                 &:hover {
-                    background-color: var(--background-soft-light-color);
+                    background-color: var(--secondary-background-color);
                 }
 
                 &.active {
                     background-color: var(--active-color);
                     color: var(--text-primary-color);
-    
+
                     &:hover {
                         background-color: var(--active-hover-color);
                     }
