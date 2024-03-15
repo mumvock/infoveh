@@ -1,0 +1,32 @@
+menu  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li.dropdown {
+        &:has(menu) > a {
+            &::after {
+                content: "";
+                border: 2px solid;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                margin-bottom: .15rem;
+                margin-left: .6rem;
+                padding: 3px;
+                transform: rotate(45deg);
+            }
+        }
+
+        > menu {
+            background-color: var(--background-dark-color);
+            box-shadow: var(--float-shadow-button);
+            display: none;
+            position: absolute;
+            width: 100%;
+        }
+
+        &:has(a:hover) > menu {
+            display: block !important;
+        }
+    }
+}
