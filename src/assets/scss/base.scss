@@ -1,0 +1,54 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    background-color: var(--main-background-color);
+    color           : var(--text-primary-color);
+    font-size       : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    font-family     : 14px;
+}
+
+body {
+    display: grid;
+    margin: 0;
+}
+
+a {
+    color: var(--anchor-color);
+    cursor: pointer;
+    outline: transparent;
+    text-decoration: none;
+    transition: color 80ms cubic-bezier(.165, .84, .44, 1), background 80ms linear;
+    user-select: none;
+
+    &:hover {
+        color: var(--anchor-hover-color);
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 400;
+    margin-top: 0;
+}
+
+hr {
+    border-top-color: var(--main-background-color);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li:has(select.sub-button) {
+        display: inline-flex;
+    }
+}

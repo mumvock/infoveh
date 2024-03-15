@@ -1,0 +1,46 @@
+@mixin dark-scheme {
+    --main-background-color : rgb(37, 36, 35);
+    
+    --text-primary-color    : rgba(255, 255, 255, .95);
+
+    --anchor-color          : rgb(152, 198, 255);
+    --anchor-hover-color    : rgb(184, 216, 255);
+    
+    --active-color          : rgb(55, 96, 145);
+    --active-hover-color    : rgb(73, 126, 191);
+    
+    --accent-color          : rgb(0, 129, 227);
+    --accent-hover-color    : rgb(121, 181, 255);
+}
+
+@mixin light-scheme {
+    --main-background-color : rgba(255, 255, 255, .95);
+    
+    --text-primary-color    : rgb(37, 36, 35);
+
+    --anchor-color          : rgb(152, 198, 255);
+    --anchor-hover-color    : rgb(184, 216, 255);
+    
+    --active-color          : rgb(55, 96, 145);
+    --active-hover-color    : rgb(73, 126, 191);
+    
+    --accent-color          : rgb(0, 129, 227);
+    --accent-hover-color    : rgb(121, 181, 255);
+}
+
+:root {
+    @include dark-scheme;
+    --error-color   : rgb(227, 0, 0);
+
+    @media (prefers-color-scheme: dark) {
+        @include dark-scheme;
+    }
+
+    @media (prefers-color-scheme: light) {
+        @include light-scheme;
+    }
+}
+
+html {
+    color-scheme: dark light;
+}
