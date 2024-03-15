@@ -29,6 +29,10 @@
                     background-color: var(--c-active);
                     color: var(--c-text-primary);
 
+                    @media (prefers-color-scheme: light) {
+                        color: white;
+                    }
+
                     &:hover {
                         background-color: var(--c-active-hover);
                     }

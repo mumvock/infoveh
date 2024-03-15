@@ -4,7 +4,7 @@
     --c-float-background    : rgb(32, 31, 30);
     --c-secondary-background: rgb(41, 40, 39);
 
-    --c-text-primary        : rgba(255, 255, 255, .95);
+    --c-text-primary        : var(--c-white);
 
     --c-border              : rgba(255, 255, 255, .18);
 
@@ -13,7 +13,7 @@
 }
 
 @mixin light-scheme {
-    --c-main-background     : rgba(255, 255, 255, .95);
+    --c-main-background     : var(--c-white);
 
     --c-float-background    : rgb(252, 252, 252);
     --c-secondary-background: rgb(246, 246, 246);
@@ -28,6 +28,8 @@
 
 :root {
     @include dark-scheme;
+
+    --c-white           : rgba(255, 255, 255, .95);
 
     --c-active          : rgb(55, 96, 145);
     --c-active-hover    : rgb(73, 126, 191);
