@@ -1,5 +1,5 @@
 :host-context(select[iv-sub-button]) {
-    border-left: 1px solid var(--c-accent-hover);
+    border-left: 1px solid var(--c-anchor-hover);
     padding: 8px 0 6px 11px;
 
     > span:first-of-type {
@@ -50,7 +50,7 @@
 
 :host {
     align-items: center;
-    background-color: var(--c-accent);
+    background-color: var(--c-anchor);
     border: none;
     border-radius: var(--border-radius);
     color: var(--c-white);
@@ -70,7 +70,7 @@
     }
 
     &:hover {
-        background-color: var(--c-accent-hover);
+        background-color: var(--c-anchor-hover);
     }
 
     &:disabled {
@@ -104,7 +104,7 @@
             -webkit-animation: loading 1s linear infinite;
             -moz-animation: loading 1s linear infinite;
             animation: loading 1s linear infinite;
-            background-color: var(--c-accent);
+            background-color: var(--c-anchor);
             bottom: 0;
             content: "";
             height: 2px;
