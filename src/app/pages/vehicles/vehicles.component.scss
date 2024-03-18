@@ -1,13 +1,10 @@
 :host {
-    ul  {
+    > ul  {
         display: grid;
         grid-gap: 1.5rem;
         grid-template-columns: repeat(auto-fill, 15rem);
-        list-style: none;
-        margin: 0;
-        padding: 0;
 
-        > li {
+        > li {  // Card
             --card-padding: 1rem;
 
             background-color: var(--c-content-background);
@@ -23,7 +20,9 @@
             padding: var(--card-padding);
 
             > h3 {
+                color: var(--c-accent);
                 font-weight: 600;
+                margin-bottom: 1rem;
             }
 
             > img {
@@ -45,6 +44,18 @@
 
             > button {
                 margin-top: 1rem;
+            }
+
+            > ul { // Vehicle details
+                display: grid;
+                grid-gap: 1rem;
+
+                > li {
+                    background-color: var(--c-secondary-background);
+                    border: 1px solid var(--c-border);
+                    border-radius: var(--border-radius);
+                    padding: .5rem 1rem;
+                }
             }
         }
     }

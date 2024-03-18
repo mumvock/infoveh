@@ -1,6 +1,5 @@
 <ul>
     <li *ngFor="let vehicle of vehicles; index">
-
         <ng-container *ngIf="!vehicle.showDetails; else details">
             <img
                 src="./assets/images/car-placeholder.png"
@@ -16,7 +15,21 @@
         </ng-container>
 
         <ng-template #details>
-            <p>DETALHES >>> {{ vehicle.brand }} {{ vehicle.model }}</p>
+            <h3>{{ vehicle.brand }} {{ vehicle.model }}</h3>
+            <ul>
+                <li>
+                    <p>Plate:</p>
+                    <span class="ivt-secondary">{{ vehicle?.adm?.plate }}</span>
+                </li>
+                <li>
+                    <p>Chassi:</p>
+                    <span class="ivt-secondary">{{ vehicle?.adm?.chassi }}</span>
+                </li>
+                <li>
+                    <p>Renavam:</p>
+                    <span class="ivt-secondary">{{ vehicle?.adm?.renavam }}</span>
+                </li>
+            </ul>
         </ng-template>
 
         <button
