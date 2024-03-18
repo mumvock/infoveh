@@ -7,7 +7,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     template: `
         <nav iv-nav></nav>
         <main>
-            <router-outlet />
+            <router-outlet #routerOutlet="outlet" />
+
+            <div *ngIf="!routerOutlet.isActivated" id="get-started">
+                <div class="icon">
+                    <span class="arrow"></span>
+                </div>
+                <p>Click on a link in navigation bar above to get started.</p>
+            </div>
         </main>
     `,
 })

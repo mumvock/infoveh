@@ -2,4 +2,62 @@
     main {
         padding: 2rem;
     }
+
+    div#get-started {
+        padding: 5rem;
+
+        p {
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+
+        div.icon {
+            transform: rotate(-115deg);
+            width: 80px;
+            height: 60px;
+            position: relative;
+
+            span.arrow {
+                position: absolute;
+                top: 25px;
+                width: 90%;
+                height: 5px;
+                background-color: var(--c-text-primary);
+                -webkit-animation: arrow 1s linear infinite;
+                -moz-animation: arrow 1s linear infinite;
+                animation: arrow 1s linear infinite;
+            }
+
+            span.arrow::after, span.arrow::before {
+                content: '';
+                position: absolute;
+                width: 53%;
+                height: 5px;
+                right: -8px;
+                background-color: var(--c-text-primary);
+            }
+
+            span.arrow::after {
+                top: -12px;
+                transform: rotate(45deg);
+            }
+
+            span.arrow::before {
+                top: 12px;
+                transform: rotate(-45deg);
+            }
+
+            @keyframes arrow {
+                0% {
+                    left: 0;
+                }
+                50% {
+                    left: 20px;
+                }
+                100% {
+                    left: 0;
+                }
+            }
+        }
+    }
 }
