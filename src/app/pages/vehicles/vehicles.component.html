@@ -1,7 +1,7 @@
 <ul>
-    <li *ngFor="let vehicle of vehicles">
+    <li *ngFor="let vehicle of vehicles; index">
 
-        <ng-container *ngIf="true; else details">
+        <ng-container *ngIf="!vehicle.showDetails; else details">
             <img
                 src="./assets/images/car-placeholder.png"
                 [alt]="
@@ -13,12 +13,18 @@
                 <span>{{ vehicle.specs.engine }}</span>
                 <span>{{ vehicle.factoryYear }}/{{ vehicle.modelYear }}</span>
             </div>
-
-            <button iv-button type="button">Details</button>
         </ng-container>
 
         <ng-template #details>
             <p>DETALHES >>> {{ vehicle.brand }} {{ vehicle.model }}</p>
         </ng-template>
+
+        <button
+            iv-button="secondary"
+            type="button"
+            (click)="toggleDetails(vehicle)">
+
+            {{ vehicle?.showDetails ? 'Overview' : 'Details' }}
+        </button>
     </li>
 </ul>

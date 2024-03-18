@@ -4,7 +4,7 @@
     --c-content-background  : rgb(51, 50, 50);
     --c-float-background    : rgb(32, 31, 30);
     --c-text-primary        : var(--c-white);
-    --c-text-secondary      : var(--c-white-80);
+    --c-text-secondary      : var(--c-white-70);
     --c-border              : rgba(255, 255, 255, .18);
     --c-anchor              : rgb(152, 198, 255);
     --c-anchor-hover        : rgb(184, 216, 255);
@@ -17,7 +17,7 @@
     --c-float-background    : var(--c-lighter-gray);
     --c-text-primary        : var(--c-dark-gray);
     --c-text-secondary      : var(--c-dark-gray-80);
-    --c-border              : rgb(234, 234, 234);
+    --c-border              : var(--c-light-gray);
     --c-anchor              : rgb(58, 131, 228);
     --c-anchor-hover        : rgb(105, 164, 242);
 }
@@ -25,8 +25,9 @@
 :root {
     @include dark-scheme;
     --c-white           : rgba(255, 255, 255, .95);
-    --c-white-80        : rgba(255, 255, 255, .8);
+    --c-white-70        : rgba(255, 255, 255, .7);
     --c-lighter-gray    : rgb(252, 252, 252);
+    --c-light-gray      : rgb(234, 234, 234);
     --c-dark-gray       : rgb(37, 36, 35);
     --c-dark-gray-80    : rgba(37, 36, 35, .8);
     --c-active          : rgb(55, 96, 145);

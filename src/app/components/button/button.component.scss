@@ -1,11 +1,58 @@
 :host-context(select[iv-sub-button]) {
+    border-left: 1px solid var(--c-accent-hover);
     padding: 8px 0 6px 11px;
+
+    > span:first-of-type {
+        margin-right: 0;
+    }
+}
+
+:host-context(button[iv-button="text"]) {
+    background-color: transparent;
+    color: var(--c-text-primary);
+    min-height: 19px;
+    min-width: 19px;
+    padding: 0;
+
+    &:hover:not(:disabled) {
+        background-color: rgba(255, 255, 255, .15);
+
+        @media (prefers-color-scheme: light) {
+            background-color: var(--c-border);
+        }
+    }
+
+    &.active {
+        color: var(--c-anchor);
+
+        &:hover {
+            color: var(--c-anchor-hover);
+        }
+    }
+
+    > span:first-of-type {
+        font-size: 1rem;
+    }
+}
+
+:host-context(button[iv-button="secondary"]) {
+    background-color: var(--c-content-background);
+
+
+    &:not(:hover) {
+        color: var(--c-anchor);
+    }
+
+    &:hover {
+        background-color: var(--c-active);
+    }
 }
 
 :host {
     align-items: center;
     background-color: var(--c-accent);
     border: none;
+    border-radius: var(--border-radius);
     color: var(--c-white);
     cursor: pointer;
     display: inline-flex;
@@ -36,35 +83,8 @@
         }
     }
 
-    &.secondary {
-        background-color: rgb(50, 49, 48);
-
-        &:hover {
-            background-color: var(--c-active);
-        }
-    }
-
-    &.text {
-        background-color: transparent;
-        min-height: 19px;
-        min-width: 19px;
-        padding: 0;
-
-        &:hover:not(:disabled) {
-            background-color: rgba(255, 255, 255, .15);
-        }
-
-        &.active {
-            color: var(--c-anchor);
-
-            &:hover {
-                color: var(--c-anchor-hover);
-            }
-        }
-
-        > span:first-of-type {
-            font-size: 1rem;
-        }
+    &:active {
+        transform: translate(3px, 3px);
     }
 
     &.loading:not(.secondary):not(.text):not(:disabled) {
@@ -107,12 +127,4 @@
             }
         }
     }
-
-        &[iv-sub-button] {
-            border-left: 1px solid var(--c-accent-hover);
-
-            > span:first-of-type {
-                margin-right: 0;
-            }
-        }
 }

@@ -22,6 +22,7 @@ export class VehiclesComponent {
             },
             factoryYear: 2001,
             modelYear: 2002,
+            showDetails: false
         },
         {
             id: 1,
@@ -38,5 +39,9 @@ export class VehiclesComponent {
             factoryYear: 2020,
             modelYear: 2021,
         }
-    ]
+    ];
+
+    protected toggleDetails(vehicle: typeof this.vehicles[0]): void {
+        vehicle.showDetails = !!!vehicle.showDetails; // `!!!` 'cause `showDetails` could be `undefined`
+    }
 }

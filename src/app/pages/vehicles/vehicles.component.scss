@@ -8,6 +8,8 @@
         padding: 0;
 
         > li {
+            --card-padding: 1rem;
+
             background-color: var(--c-content-background);
             border-radius: var(--border-radius-container);
             box-shadow:
@@ -16,8 +18,8 @@
                 rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
             display: flex;
             flex-direction: column;
-
-            --card-padding: 1rem;
+            justify-content: space-between;
+            overflow: hidden;
             padding: var(--card-padding);
 
             > h3 {

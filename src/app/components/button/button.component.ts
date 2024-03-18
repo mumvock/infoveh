@@ -15,4 +15,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 export class ButtonComponent {
     @Input()
     public icon?: string;
+
+    @Input()
+    public 'iv-button': string;
 }
