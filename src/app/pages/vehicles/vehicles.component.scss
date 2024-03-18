@@ -1,4 +1,10 @@
 :host {
+    > ul > li.placeholder {
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+
     > ul  {
         display: grid;
         grid-gap: 1.5rem;
@@ -16,6 +22,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            min-height: 295px;
             overflow: hidden;
             padding: var(--card-padding);
 

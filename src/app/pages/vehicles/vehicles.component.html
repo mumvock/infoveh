@@ -1,5 +1,5 @@
 <ul>
-    <li *ngFor="let vehicle of vehicles; index">
+    <li *ngFor="let vehicle of vehicles$$(); index">
         <ng-container *ngIf="!vehicle.showDetails; else details">
             <img
                 src="./assets/images/car-placeholder.png"
@@ -39,5 +39,9 @@
 
             {{ vehicle?.showDetails ? 'Overview' : 'Details' }}
         </button>
+    </li>
+
+    <li *ngFor="let number of placeholders$$()" class="placeholder">
+        <p>Loading vehicle...</p>
     </li>
 </ul>
