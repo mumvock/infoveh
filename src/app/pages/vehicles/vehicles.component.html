@@ -1,1 +1,24 @@
-<p>vehicles works!</p>
+<ul>
+    <li *ngFor="let vehicle of vehicles">
+
+        <ng-container *ngIf="true; else details">
+            <img
+                src="./assets/images/car-placeholder.png"
+                [alt]="
+                    vehicle.brand + ' ' + vehicle.model + ' picture'
+                ">
+
+            <h3>{{ vehicle.brand }} {{ vehicle.model }}</h3>
+            <div>
+                <span>{{ vehicle.specs.engine }}</span>
+                <span>{{ vehicle.factoryYear }}/{{ vehicle.modelYear }}</span>
+            </div>
+
+            <button iv-button type="button">Details</button>
+        </ng-container>
+
+        <ng-template #details>
+            <p>DETALHES >>> {{ vehicle.brand }} {{ vehicle.model }}</p>
+        </ng-template>
+    </li>
+</ul>

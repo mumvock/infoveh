@@ -18,7 +18,6 @@ body {
 
 a {
     color: var(--c-anchor);
-    cursor: pointer;
     outline: transparent;
     text-decoration: none;
     transition: color 80ms cubic-bezier(.165, .84, .44, 1), background 80ms linear;
@@ -27,6 +26,10 @@ a {
     &:hover {
         color: var(--c-anchor-hover);
     }
+}
+
+a, button {
+    cursor: pointer;
 }
 
 h1,

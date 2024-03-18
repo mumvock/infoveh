@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 import { VehiclesRoutingModule } from './vehicles-routing.module';
-
+import { VehiclesComponent } from './vehicles.component';
+import { ButtonComponent } from './../../components/button/button.component';
 
 @NgModule({
-    declarations: [],
+    declarations: [
+        VehiclesComponent,
+    ],
     imports: [
-        CommonModule,
-        VehiclesRoutingModule
+        NgIf,
+        NgFor,
+        VehiclesRoutingModule,
+        ButtonComponent
     ]
 })
 export class VehiclesModule { }

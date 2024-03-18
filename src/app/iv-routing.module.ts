@@ -4,15 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 export const IV_ROUTES: Routes = [
     {
         path: 'vehicles',
-        title: 'Vehicles',
-        children: [
-            {
-                path: 'list',
-                title: 'List',
-                loadChildren: () =>
-                    import('./pages/vehicles/vehicles.module').then(m => m.VehiclesModule)
-            },
-        ]
+        loadChildren: () =>
+            import('./pages/vehicles/vehicles.module').then(m => m.VehiclesModule)
     },
 ];
 

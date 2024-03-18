@@ -1,43 +1,40 @@
 @mixin dark-scheme {
-    --c-main-background     : rgb(37, 36, 35);
-
-    --c-float-background    : rgb(32, 31, 30);
+    --c-main-background     : var(--c-dark-gray);
     --c-secondary-background: rgb(41, 40, 39);
-
+    --c-content-background  : rgb(51, 50, 50);
+    --c-float-background    : rgb(32, 31, 30);
     --c-text-primary        : var(--c-white);
-
+    --c-text-secondary      : var(--c-white-80);
     --c-border              : rgba(255, 255, 255, .18);
-
     --c-anchor              : rgb(152, 198, 255);
     --c-anchor-hover        : rgb(184, 216, 255);
 }
 
 @mixin light-scheme {
     --c-main-background     : var(--c-white);
-
-    --c-float-background    : rgb(252, 252, 252);
     --c-secondary-background: rgb(246, 246, 246);
-
-    --c-text-primary        : rgb(37, 36, 35);
-
-    --c-border              : rgb(238, 238, 238);
-
+    --c-content-background  : var(--c-lighter-gray);
+    --c-float-background    : var(--c-lighter-gray);
+    --c-text-primary        : var(--c-dark-gray);
+    --c-text-secondary      : var(--c-dark-gray-80);
+    --c-border              : rgb(234, 234, 234);
     --c-anchor              : rgb(58, 131, 228);
     --c-anchor-hover        : rgb(105, 164, 242);
 }
 
 :root {
     @include dark-scheme;
-
     --c-white           : rgba(255, 255, 255, .95);
-
+    --c-white-80        : rgba(255, 255, 255, .8);
+    --c-lighter-gray    : rgb(252, 252, 252);
+    --c-dark-gray       : rgb(37, 36, 35);
+    --c-dark-gray-80    : rgba(37, 36, 35, .8);
     --c-active          : rgb(55, 96, 145);
     --c-active-hover    : rgb(73, 126, 191);
-
     --c-accent          : rgb(0, 129, 227);
     --c-accent-hover    : rgb(121, 181, 255);
-
     --c-error           : rgb(227, 0, 0);
+    --c-neutral         : rgb(121, 119, 117);
 
     @media (prefers-color-scheme: dark) {
         @include dark-scheme;
